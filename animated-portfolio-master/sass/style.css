@@ -1037,3 +1037,21 @@ blockquote p::after {
     flex-basis: 48%;
   }
 }
+/* Resume Download Button */
+.btn-resume {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background: #0c49e3;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-resume:hover {
+  background: #e64a00;
+  transform: translateY(-3px);
+}
