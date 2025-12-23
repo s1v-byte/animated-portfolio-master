@@ -783,3 +783,257 @@ blockquote p::after {
   border-top: 1px solid #FFFFFF0D;
 }
 /*# sourceMappingURL=style.css.map */
+/* Projects Section */
+.portfolio--content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Card styling */
+.card {
+  border: 5px solid;
+  border-image: linear-gradient(45deg, #FF9800, #800080) 1;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-img {
+  width: 100%;
+  height: auto;  /* ensures images keep aspect ratio, no cropping */
+  max-height: 250px; /* optional, keeps images visually balanced */
+  object-fit: contain; /* no cropping */
+  margin-bottom: 15px;
+}
+/* Carousel container styling */
+
+.carousel-image-project {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0;
+  animation: crossFade 9s infinite;
+}
+
+/* stagger each image */
+.carousel-image-project:nth-child(1) { animation-delay: 0s; }
+.carousel-image-project:nth-child(2) { animation-delay: 3s; }
+.carousel-image-project:nth-child(3) { animation-delay: 6s; }
+
+/* ===== PROJECT CAROUSEL (SLIDE) ===== */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* replace width:300% with flexible layout so each slide is full carousel width */
+.carousel-track {
+  display: flex;
+  /* remove width: 300%; keep the animation or JS to change transform */
+  /* animation: slideCarousel 9s infinite; */
+}
+.carousel-track img {
+  width: 100%;           /* ensures each image fills the carousel viewport */
+  flex-shrink: 0;
+}
+
+
+/* Slide animation */
+@keyframes slideCarousel {
+  0%   { transform: translateX(0); }
+  30%  { transform: translateX(0); }
+
+  33%  { transform: translateX(-100%); }
+  63%  { transform: translateX(-100%); }
+
+  66%  { transform: translateX(-200%); }
+  96%  { transform: translateX(-200%); }
+
+  100% { transform: translateX(0); }
+}
+
+/* General styling for cards */
+.portfolio--content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* spacing between cards */
+}
+
+/* make carousel images match Card 3 image sizing */
+.item.card img,
+.item.card .carousel-track img {
+  margin-top: 15px;      /* same spacing as Card 3 */
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;        /* avoid inline spacing issues */
+}
+/* Card 3 image: match carousel size & crop, without affecting other sections */
+.carousel-like {
+  display: block;
+  width: 100%;
+  margin-top: 15px;       /* same spacing as carousel images */
+  border-radius: 8px;
+  aspect-ratio: 16/9;     /* match carousel viewport ratio */
+  object-fit: cover;      /* fill the area like carousel slides */
+  max-height: 420px;      /* optional cap so image won't get huge on very tall screens */
+}
+/* Education Timeline */
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.timeline-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #FF5100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-icon img {
+  width: 60%;
+  height: auto;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #222;
+}
+
+.timeline-content p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.timeline-content .orange {
+  color: #FF5100;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline-item {
+    gap: 40px;
+  }
+
+  .timeline-content h3 {
+    font-size: 28px;
+  }
+
+  .timeline-content p {
+    font-size: 20px;
+  }
+}
+/* Education & Contact Container */
+.edu-contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.timeline-icon {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #FF5100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-icon img {
+  width: 60%;
+  height: auto;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #222;
+}
+
+.timeline-content p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.timeline-content .orange {
+  color: #FF5100;
+  font-weight: 700;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.contact-info h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.contact-info a {
+  color: #FF5100;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for larger screens */
+@media screen and (min-width: 768px) {
+  .edu-contact-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .education-timeline, .contact-info {
+    flex-basis: 48%;
+  }
+}
