@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>John Dave Surigao | Data Analyst Portfolio</title>
+  <title>John Dave Surigao - Portfolio</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;700&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
       <li><a href="#skill">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education-contact">Education</a></li>
-      <li><a href="#certifications">Certificate</a></li>
+      <li><a href="#certifications">Certificates</a></li>
     </ul>
   </div>
 </nav>
@@ -37,7 +37,7 @@
   <div class="banner--content" data-aos="fade-in">
     <h1 class="designation">John Dave A. Surigao</h1>
     <p class="tagline">
-      Python • Power BI • Data Cleaning • Visualization
+      Excel • Python • Power BI • Visualization
     </p>
 
   </div>
@@ -187,25 +187,141 @@
   </div>
 </section>
 <!-- CERTIFICATIONS -->
+<style>
+  /* Certifications styles (replace your old certification styles with these) */
+  .certifications-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 30px; /* space between certificates */
+    justify-items: center;
+    margin-top: 30px;
+    align-items: start;
+  }
+
+  .cert-item{
+    text-decoration: none;
+    width: 100%;
+    max-width: 364px; /* desired visual size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;      /* center vertically inside the grid cell */
+    gap: 6px;                     /* small gap between image and caption */
+    padding: 8px 0;               /* small vertical padding */
+    min-height: 260px;            /* gives room so items center nicely — adjust as needed */
+    box-sizing: border-box;
+  }
+
+  .cert-icon{
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .cert-icon img{
+    width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+  }
+
+  .cert-caption{
+    margin: 0;                    /* no extra margin — gap handles spacing */
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.2;
+    color: #222;
+    padding: 0 6px;
+  }
+
+  .cert-caption .title{
+    display: block;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .cert-caption .date{
+    display: block;
+    font-size: 12px;
+    color: #666;
+  }
+
+  /* Smaller vertical offset for row 2 items (if you still want the staggered look) */
+  .cert-item.offset{
+    margin-top: 20px;
+  }
+
+  /* Responsive: stack to 1 per row on small screens */
+  @media (max-width: 600px){
+    .certifications-container {
+      grid-template-columns: 1fr;
+    }
+    .cert-item{
+      max-width: 320px;
+      min-height: auto;
+      padding: 6px 0;
+    }
+    .cert-item.offset{
+      margin-top: 12px;
+    }
+  }
+</style>
+
 <section id="certifications">
   <div class="content">
     <h2 class="center">Certifications</h2>
 
     <div class="certifications-container">
 
-      <!-- Card 3 -->
-      <a href="https://courses.cognitiveclass.ai/certificates/4861061b10834f0989859b086337c459#" target="_blank" class="cert-item" data-aos="fade-up" data-aos-delay="400">
+      <!-- Certificate 1 -->
+      <a href="https://courses.cognitiveclass.ai/certificates/4861061b10834f0989859b086337c459#" target="_blank" class="cert-item">
         <div class="cert-icon">
-          <img src="animated-portfolio-master/assets/images/Python-Certificate.png" alt="Power BI Certificate Preview">
+          <img src="animated-portfolio-master/assets/images/Python-Certificate.png" alt="Python Certificate">
         </div>
-        <div class="cert-content">
+        <div class="cert-caption">
+          <span class="title">Python for Data Science</span>
+          <span class="date">Issued Dec 2025</span>
+        </div>
+      </a>
 
+      <!-- Certificate 2 -->
+      <a href="#" target="_blank" class="cert-item">
+        <div class="cert-icon">
+          <img src="animated-portfolio-master/assets/images/Intro-Excel.png" alt="Introduction to Data Analysis using Microsoft Excel">
+        </div>
+        <div class="cert-caption">
+          <span class="title">Introduction to Data Analysis using Microsoft Excel</span>
+          <span class="date">Issued Dec 2025</span>
+        </div>
+      </a>
+
+      <!-- Certificate 3 -->
+      <a href="#" target="_blank" class="cert-item offset">
+        <div class="cert-icon">
+          <img src="animated-portfolio-master/assets/images/Getting-Started-Excel.png" alt="Getting Started with Microsoft Excel">
+        </div>
+        <div class="cert-caption">
+          <span class="title">Getting Started with Microsoft Excel</span>
+          <span class="date">Issued Dec 2025</span>
+        </div>
+      </a>
+
+      <!-- Certificate 4 -->
+      <a href="#" target="_blank" class="cert-item offset">
+        <div class="cert-icon">
+          <img src="animated-portfolio-master/assets/images/Conditional-Excel.png" alt="Conditional Formatting, Tables and Charts in Microsoft Excel">
+        </div>
+        <div class="cert-caption">
+          <span class="title">Conditional Formatting, Tables and Charts in Microsoft Excel</span>
+          <span class="date">Issued Jan 2026</span>
         </div>
       </a>
 
     </div>
   </div>
 </section>
+
+
 
 
 
