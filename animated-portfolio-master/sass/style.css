@@ -1055,3 +1055,60 @@ blockquote p::after {
   background: #e64a00;
   transform: translateY(-3px);
 }
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* card */
+.cert-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+/* image */
+.cert-img {
+  width: 100%;
+  display: block;
+}
+
+/* black bar */
+.cert-info {
+  background: #111;
+  color: #fff;
+  padding: 14px 16px;
+}
+
+.cert-info h4 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cert-info p {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0 0 10px;
+}
+
+.cert-source {
+  font-size: 12px;
+  opacity: .8;
+}
+
+/* title + issued text below the card */
+.cert-title {
+  text-align: center;
+  margin: 10px 0 4px;
+  font-size: 16px;
+}
+
+.cert-issued {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}
